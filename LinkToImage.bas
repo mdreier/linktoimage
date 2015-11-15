@@ -1,4 +1,3 @@
-Attribute VB_Name = "LinkToImage"
 ' Copyright 2015, Martin Dreier
 '
 ' This program is free software: you can redistribute it and/or modify
@@ -22,7 +21,6 @@ Const MSG_ERROR_TITLE As Integer = 4
 Const MSG_CANNOT_REPLACE As Integer = 5
 
 Sub LinkToImage()
--Attribute LinkToImage.VB_Description = "Link2Image"
 '
 ' Link2Image Makro
 ' Ersetzt Hyperlinks im aktiven Dokument durch die Bilder, auf die diese verweisen
@@ -88,6 +86,8 @@ Function replaceHyperlink(ByVal hlink As Hyperlink)
 
 ErrorHandler:
     MsgBox translate(MSG_CANNOT_REPLACE) & vbCrLf & Err.Description, vbOKOnly, translate(MSG_ERROR_TITLE)
+'   Revert deletion of the hyperlink
+    ActiveDocument.Undo
     Resume Next
 End Function
 
