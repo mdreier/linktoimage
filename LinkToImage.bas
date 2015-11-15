@@ -18,10 +18,11 @@ Attribute VB_Name = "LinkToImage"
 Const MSG_NO_HYPERLINKS As Integer = 1
 Const MSG_REPLACE_LINK As Integer = 2
 Const MSG_REPLACE_TITLE As Integer = 3
+Const MSG_ERROR_TITLE As Integer = 4
+Const MSG_CANNOT_REPLACE As Integer = 5
 
 Sub LinkToImage()
-Attribute LinkToImage.VB_Description = "TEst"
-Attribute LinkToImage.VB_ProcData.VB_Invoke_Func = "Project.NewMacros.Makro1"
+-Attribute LinkToImage.VB_Description = "Link2Image"
 '
 ' Link2Image Makro
 ' Ersetzt Hyperlinks im aktiven Dokument durch die Bilder, auf die diese verweisen
@@ -71,6 +72,8 @@ End Sub
 ' image inserted in its place
 ' hlink: Hyperlink to replace
 Function replaceHyperlink(ByVal hlink As Hyperlink)
+    On Error GoTo ErrorHandler
+    
     Dim target As String
     'Step 1: Save hyperlink target and format for path
     target = hlink.Address
@@ -81,6 +84,11 @@ Function replaceHyperlink(ByVal hlink As Hyperlink)
     
     'Step 3: Insert picture
     Selection.InlineShapes.AddPicture FileName:=target, LinkToFile:=False, SaveWithDocument:=True
+    Exit Function
+
+ErrorHandler:
+    MsgBox translate(MSG_CANNOT_REPLACE) & vbCrLf & Err.Description, vbOKOnly, translate(MSG_ERROR_TITLE)
+    Resume Next
 End Function
 
 ' Translate messages into the application language. If the translation for
@@ -96,6 +104,10 @@ Function translate(ByVal messageId As Integer) As String
                 translate = "Link ersetzen?"
             Case MSG_REPLACE_TITLE
                 translate = "Hyperlink durch Ziel ersetzen"
+            Case MSG_ERROR_TITLE
+                translate = "Fehler"
+            Case MSG_CANNOT_REPLACE
+                translate = "Link konnte nicht ersetzt werden. Fehler:"
         End Select
     Else ' Default: English
         Select Case messageId
@@ -105,6 +117,10 @@ Function translate(ByVal messageId As Integer) As String
                 translate = "Replace Link?"
             Case MSG_REPLACE_TITLE
                 translate = "Replace Hyperlink With Target"
+            Case MSG_ERROR_TITLE
+                translate = "Error"
+            Case MSG_CANNOT_REPLACE
+                translate = "Link could not be replaced. Error:"
         End Select
     End If
     
@@ -112,3 +128,4 @@ Function translate(ByVal messageId As Integer) As String
         translate = "Unknown message ID: " & messageId
     End If
 End Function
+
