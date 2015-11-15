@@ -5,7 +5,7 @@ The motivation for this little script arrived when a family member had to use a 
 
 ##Installation
 
-Download the [latest version](releases/latest) from the releases page on Github. This is a `.dotm` file. To install it into Word, Go to Start -> Run or press <Windows Key>+R. Then enter the path `%Appdata%/Microsoft/word/startup` and press Enter or click OK. Copy the downloaded file into this directory. If you have an older version installed, replace the existing file. After restarting Word, the script is available as a new icon in the Quick Access Toolbar (in the title bar of the application window).
+Download the [latest version](https://github.com/mdreier/linktoimage/releases/latest) from the releases page on Github. This is a `.dotm` file. To install it into Word, Go to Start -> Run or press <Windows Key>+R. Then enter the path `%Appdata%/Microsoft/word/startup` and press Enter or click OK. Copy the downloaded file into this directory. If you have an older version installed, replace the existing file. After restarting Word, the script is available as a new icon in the Quick Access Toolbar (in the title bar of the application window).
 
 ##Usage
 
@@ -16,7 +16,7 @@ To run the program, click the icon in the Quick Access Toolbar (near the Word ic
 <a name="de"></a>de | [en](#en)
 ##Einrichtung
 
-Laden Sie die [neueste Version](releases/latest) von der Github-Releases-Seite herunter. Dies ist eine `.dotm`-Datei. Um sie in Word zu installieren, klicken Sie im Startmenü auf "Ausführen" oder drücken Sie <Windows-Taste>+R. Geben Sie den Pfad `%Appdata%/Microsoft/word/startup` ein und drücken Sie die Enter-Taste oder die Schaltfläche OK. Kopieren Sie die heruntergeladene Datei in dieses Verzeichnis. Wenn Sie bereits eine ältere Version haben überschreiben Sie die vorhandene Datei. Nach dem Neustart von Word ist das Skript als neues Symbol in der Schnellzugriffsleiste (in der Titelleiste der Anwendung) verfügbar.
+Laden Sie die [neueste Version](https://github.com/mdreier/linktoimage/releases/latest) von der Github-Releases-Seite herunter. Dies ist eine `.dotm`-Datei. Um sie in Word zu installieren, klicken Sie im Startmenü auf "Ausführen" oder drücken Sie <Windows-Taste>+R. Geben Sie den Pfad `%Appdata%/Microsoft/word/startup` ein und drücken Sie die Enter-Taste oder die Schaltfläche OK. Kopieren Sie die heruntergeladene Datei in dieses Verzeichnis. Wenn Sie bereits eine ältere Version haben überschreiben Sie die vorhandene Datei. Nach dem Neustart von Word ist das Skript als neues Symbol in der Schnellzugriffsleiste (in der Titelleiste der Anwendung) verfügbar.
 
 ##Verwendung
 
