@@ -1,4 +1,5 @@
 # Link2Image
+<a name="en"></a>[de](#de) | en
 
 The motivation for this little script arrived when a family member had to use a program which only copied links into Word, but not the images to which they pointed. I wrote this script to help quickly replace the images.
 
@@ -12,6 +13,7 @@ To run the program, click the icon in the Quick Access Toolbar (near the Word ic
 
 ----------------------------------------
 
+<a name="de"></a>de | [en](#en)
 ##Einrichtung
 
 Laden Sie die neueste Version von der Github-Releases-Seite herunter. Dies ist eine `.dotm`-Datei. Um sie in Word zu installieren, klicken Sie im Startmenü auf "Ausführen" oder drücken Sie <Windows-Taste>+R. Geben Sie den Pfad `%Appdata%/Microsoft/word/startup` ein und drücken Sie die Enter-Taste oder die Schaltfläche OK. Kopieren Sie die heruntergeladene Datei in dieses Verzeichnis. Wenn Sie bereits eine ältere Version haben überschreiben Sie die vorhandene Datei. Nach dem Neustart von Word ist das Skript als neues Symbol in der Schnellzugriffsleiste (in der Titelleiste der Anwendung) verfügbar.
